@@ -9,10 +9,17 @@
       <li>Python</li>
     </ul>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+    <p>
+      Para acessar meu portifólio
+      <a v-bind:href="meu_link" target="_blank">Basta clicar</a>
+    </p>
+    <Pictures />
   </div>
 </template>
 <script>
+import Pictures from "./Pictures.vue";
 export default {
+  components: { Pictures },
   name: "Infoo",
   data() {
     return {
