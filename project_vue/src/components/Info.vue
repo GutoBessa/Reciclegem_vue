@@ -8,6 +8,9 @@
       <li>PHP</li>
       <li>Python</li>
     </ul>
+    <div>
+      <button @click="show_email">{{ texto_Botao }}</button>
+    </div>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
     <p>
       Para acessar meu portifólio
@@ -24,9 +27,20 @@ export default {
   data() {
     return {
       Esta_trabalhando: false,
-      mostrar_email: true,
+      mostrar_email: false,
       email: "luiz-augustosouza@hotmail.com",
+      texto_Botao: "Mostrar e-mail",
     };
+  },
+  methods: {
+    show_email() {
+      this.mostrar_email = !this.mostrar_email;
+      if (!this.mostrar_email) {
+        this.texto_Botao = "Mostrar email";
+      } else {
+        this.texto_Botao = "Esconder email";
+      }
+    },
   },
 };
 </script>
