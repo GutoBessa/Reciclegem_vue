@@ -1,7 +1,8 @@
 <template>
   <div>
+    <Header />
     <first-component-vue />
-    <p>O dado de app é {{ Testando }} .</p>
+    <p class="paragrafo-pai">O dado de app é {{ Testando }} .</p>
     <live-cycle-vue />
     <person />
   </div>
@@ -10,6 +11,7 @@
 import LiveCycleVue from "./components/LiveCycle.vue";
 import Person from "./components/Person.vue";
 import FirstComponentVue from "./FirstComponent.vue";
+import Header from "./Header.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     FirstComponentVue,
     LiveCycleVue,
     Person,
+    Header,
   },
   data() {
     return {
@@ -25,3 +28,17 @@ export default {
   },
 };
 </script>
+<style>
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+a {
+  color: red;
+}
+
+.teste {
+  background-color: #000;
+}
+</style>
