@@ -4,9 +4,18 @@
     <p v-else>Estou em busca de novas oprtunidades.</p>
     <p>Utilizo as sequintes tecnologias:</p>
     <ul>
-      <li>JavaScript</li>
-      <li>PHP</li>
-      <li>Python</li>
+      <li
+        v-for="(technology, index) in backend_technologies"
+        v-bind:key="index"
+      >
+        {{ technology }}
+      </li>
+    </ul>
+    <p>Utilizo as sequintes technologias para front-end:</p>
+    <ul>
+      <li v-for="technology in frontend_technologies" key="technology.id">
+        {{ technology.language }}
+      </li>
     </ul>
     <div>
       <button @click="show_email">{{ texto_Botao }}</button>
@@ -30,6 +39,12 @@ export default {
       mostrar_email: false,
       email: "luiz-augustosouza@hotmail.com",
       texto_Botao: "Mostrar e-mail",
+      backend_technologies: ["Javascript", "PHP", "Python"],
+      frontend_technologies: [
+        { id: 1, language: "HTML" },
+        { id: 2, language: "CSS" },
+        { id: 3, language: "VUE" },
+      ],
     };
   },
   methods: {
