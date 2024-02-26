@@ -13,7 +13,7 @@
     </ul>
     <p>Utilizo as sequintes technologias para front-end:</p>
     <ul>
-      <li v-for="technology in frontend_technologies" key="technology.id">
+      <li v-for="technology in frontend_technologies" :key="technology.id">
         {{ technology.language }}
       </li>
     </ul>
@@ -31,13 +31,17 @@
 <script>
 import Pictures from "./Pictures.vue";
 export default {
-  components: { Pictures },
   name: "Infoo",
+  components: {
+    Pictures,
+  },
+  props: {
+    email: String,
+  },
   data() {
     return {
       Esta_trabalhando: false,
       mostrar_email: false,
-      email: "luiz-augustosouza@hotmail.com",
       texto_Botao: "Mostrar e-mail",
       backend_technologies: ["Javascript", "PHP", "Python"],
       frontend_technologies: [

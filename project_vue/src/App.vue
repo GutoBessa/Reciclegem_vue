@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :esta_logado="true" />
     <first-component-vue />
     <p class="paragrafo-pai">O dado de app é {{ Testando }} .</p>
     <live-cycle-vue />
