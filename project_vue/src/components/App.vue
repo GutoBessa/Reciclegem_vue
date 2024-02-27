@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :esta_logado="true" />
+    <header :esta_logado="true" />
     <first-component-vue />
     <p class="paragrafo-pai">O dado de app é {{ Testando }} .</p>
     <live-cycle-vue />
@@ -10,8 +10,8 @@
 <script>
 import LiveCycleVue from "./components/LiveCycle.vue";
 import Person from "./components/Person.vue";
-import FirstComponentVue from "./FirstComponent.vue";
-import Header from "./Header.vue";
+import FirstComponentVue from "./components/FirstComponent.vue";
+import Header from "./components/Header.vue";
 
 export default {
   name: "App",
