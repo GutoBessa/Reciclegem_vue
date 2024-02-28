@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import ReutilizacaoVue from "./components/Reutilizacao.vue";
+import ReutilizacaoVue from "./Reutilizacao.vue";
 import MultiplosEventos from "./MultiplosEventos.vue";
 
 export default {
